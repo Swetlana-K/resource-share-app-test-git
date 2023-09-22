@@ -23,7 +23,7 @@ jobs:
       matrix:
         python-version: ["3.11"] # Python version to build the applciation
 
-    enviroment:
+    environment:
       name: dev-test
 
     env: # environment variables.
