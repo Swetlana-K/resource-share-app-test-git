@@ -13,7 +13,7 @@ on:
     types:
       - opened # run workflow only when .py files are modified
     path:
-      - "**.py"
+      - "**.py" # run only when
 
 jobs:
   build: # job id
@@ -37,9 +37,9 @@ jobs:
       postgres_main:
         image: postgres:15
         env:
-          POSTGRES_USER: ${{ env.DB_USER }}
-          POSTGRES_PASSWORD: ${{ env.DB_PWD }}
-          POSTGRES_DB: ${{ env.DB_NAME }}
+          POSTGRES_USER: ${{ secrets.DB_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.DB_PWD }}
+          POSTGRES_DB: ${{ vars.DB_NAME }}
         ports:
           - 5432:5432
         options: >-
