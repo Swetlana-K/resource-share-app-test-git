@@ -31,10 +31,3 @@ def simple_logging_middleware(get_response):
     return middleware
 
 
-
-""" logger.info(msg)
-logger.error(msg)
-logger.critical(msg)
-logger.debug(msg)
-logger.warning(msg) """
-
