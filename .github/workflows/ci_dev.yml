@@ -10,10 +10,10 @@ on:
     branches: ["dev"]
   pull_request:
     branches: ["dev"]
-    types:
-      - opened # run workflow only when .py files are modified
-    path:
-      - "**.py" # run only when
+    # types:
+    # - opened # run workflow only when .py files are modified
+    # path:
+    # - "**.py" # run only when
 
 jobs:
   build: # job id
