@@ -13,7 +13,7 @@ on:
     types:
       - opened # run workflow only when .py files are modified
     path:
-      - "**.py"
+      - "**.py" # run only when
 
 jobs:
   build: # job id
