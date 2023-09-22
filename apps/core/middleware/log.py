@@ -19,20 +19,15 @@ def simple_logging_middleware(get_response):
 
         response = get_response(request)  # next middleware or the view
 
-        # : post-processing -> HTTPResponse
-        # TODO: Investigate the response and decide on what to log
-        # TODO: Formulate your message
-        # TODO: log the message using the info level method
+        # Post-Processing
+        status_code = response.status_code
+        is_closed = response.closed
+        reason_phrase = response.reason_phrase
+        post_msg = f'Status code: {status_code} | closed: {is_closed} | reason phrase: {reason_phrase}'
+        logger.info(post_msg)
 
         return response
 
     return middleware
 
-
-
-""" logger.info(msg)
-logger.error(msg)
-logger.critical(msg)
-logger.debug(msg)
-logger.warning(msg) """
 

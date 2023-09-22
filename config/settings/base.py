@@ -122,7 +122,7 @@ LOGGING = {
             "level": "INFO",  # handle this logging level and any other above it
             # TODO: Search for more class options
             "class": "logging.FileHandler",  # this defines the medium to send the log messages
-            "filename": str(BASE_DIR / "logs" / "req_res_logs.txt"),
+            "filename": str(BASE_DIR / "logs" / "req_res_logs.log"),
             "formatter": "verbose",
         },
     },
