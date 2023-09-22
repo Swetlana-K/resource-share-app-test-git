@@ -23,6 +23,9 @@ jobs:
       matrix:
         python-version: ["3.11"] # Python version to build the applciation
 
+    enviroment:
+      name: dev-test
+
     env: # environment variables.
       # Use `secrets` to access secrets from  settings
       # Use `vars` to access variables from settings
